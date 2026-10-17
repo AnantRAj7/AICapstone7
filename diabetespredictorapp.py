@@ -1,5 +1,12 @@
 import streamlit as st
 import pandas as pd
+import sys
+import importlib.util
+import streamlit as st
+
+st.write("Python version:", sys.version)
+st.write("Python executable:", sys.executable)
+st.write("sklearn found:", importlib.util.find_spec("sklearn"))
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
