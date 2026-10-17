@@ -3,6 +3,7 @@ import pandas as pd
 import sys
 import importlib.util
 import streamlit as st
+import sklearn
 
 st.write("Python version:", sys.version)
 st.write("Python executable:", sys.executable)
