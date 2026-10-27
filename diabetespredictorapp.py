@@ -31,11 +31,27 @@ model.fit(x_train,y_train)
 st.title("Diabetes Prediction App")
 st.write("Enter the following details to predict the likelihood of diabetes")
 
-#user inputs for prediction 
-input_data = []
+# Define custom readable names for your features
+column_labels = {
+    'Pregnancies': 'Number of Pregnancies',
+    'Glucose': 'Blood Glucose Level',
+    'BloodPressure': 'Blood Pressure (mm Hg)',
+    'SkinThickness': 'Skin Thickness (mm)',
+    'Insulin': 'Insulin Level (mu U/ml)',
+    'BMI': 'Body Mass Index (BMI)',
+    'DiabetesPedigreeFunction': 'Diabetes Genetics',
+    'Age': 'Age (years)'
+}
+
+# User inputs for prediction stored in a dictionary
+input_data = {}
 for col in x.columns:
-  value = st.number_input(f"Enter {col}" , min_value=0.0 ,step=0.1)
-  input_data.append(value)
+    # Use the custom label if it exists, otherwise use the original column name
+    label = column_labels.get(col, col)
+    input_data[col] = st.number_input(f"Enter {label}", min_value=0.0, step=0.1)
+
+# Convert user input to a DataFrame with original column names (so the model doesn't break)
+input_df = pd.DataFrame([input_data])
 
 #Predict button 
 if st.button("Predict"):
@@ -50,21 +66,6 @@ accuracy= accuracy_score(y_test,y_pred)
 st.write(f"Accuracy: {accuracy:.2f}")
 st.text("Classifiaction Report:")
 st.text(classification_report(y_test,y_pred))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
