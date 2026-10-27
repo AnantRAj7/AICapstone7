@@ -56,7 +56,7 @@ feature_configs = {
     'BloodPressure': {'label': 'Blood Pressure (mm Hg)', 'min': 0.0, 'max': 200.0, 'default': 70.0, 'step': 1.0},
     'SkinThickness': {'label': 'Skin Thickness (mm)', 'min': 0.0, 'max': 100.0, 'default': 20.0, 'step': 1.0},
     'Insulin': {'label': 'Insulin Level', 'min': 0.0, 'max': 900.0, 'default': 80.0, 'step': 1.0},
-    'BMI': {'label': 'Body Index (BMI)', 'min': 0.0, 'max': 70.0, 'default': 25.0, 'step': 0.1},
+    'BMI': {'label': 'Body Mass Index (BMI)', 'min': 0.0, 'max': 70.0, 'default': 25.0, 'step': 0.1},
     'DiabetesPedigreeFunction': {'label': 'Diabetes Pedigree Function(Genetics)', 'min': 0.0, 'max': 3.0, 'default': 0.0, 'step': 0.01},
     'Age': {'label': 'Age (years)', 'min': 1.0, 'max': 120.0, 'default': 1.0, 'step': 1.0}
 }
