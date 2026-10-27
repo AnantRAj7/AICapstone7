@@ -33,7 +33,7 @@ st.title("Diabetes Prediction App")
 # Medical Disclaimer Alert Box
 st.warning("**Disclaimer:** This tool is intended for educational and awareness purposes only. It does not provide medical diagnosis or advice. Please consult a healthcare professional for accurate medical guidance.")
 st.markdown(
-    "<p style='font-size: 16px;'>Enter the following details to predict the likelihood of diabetes:</p>",
+    "<p style='font-size: 20px;'>Enter the following details to predict the likelihood of diabetes:</p>",
     unsafe_allow_html=True,
 )
 
